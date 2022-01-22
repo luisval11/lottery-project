@@ -22,7 +22,7 @@ const Home = () => {
 			MAX_GAMES_PER_PAGE
 		);
 		setItems(itemsToShow);
-	}, [items]);
+	}, [sort]);
 
 	const handleShowSortMenu = () => {
 		setIsOpenSort((state) => !state);
