@@ -1,4 +1,5 @@
 import { List } from "../organisms/List";
+import { Sort } from "../organisms/Sort";
 
 const Dashboard = ({
 	headerTitle,
@@ -15,6 +16,14 @@ const Dashboard = ({
 	return (
 		<div class="dashboard">
 			{headerTitle && <h4 className="dashboard__header">{headerTitle}</h4>}
+			<Sort
+				title={sortTitle}
+				sortOptions={sortOptions}
+				sortValue={sort}
+				isOpenSort={isOpenSort}
+				handleOpenSort={handleShowSortMenu}
+				handleSelectOnChange={handleSelectOnChange}
+			/>
 			<div className="dashboard__rectangle" />
 			<List
 				className="dashboard__list"
