@@ -1,0 +1,29 @@
+@import "../abstracts/variables";
+
+.radio {
+	position: absolute;
+	border-radius: 4px;
+	background-color: $color-casino-base;
+	color: $color-ui-casino-02;
+	width: 254px;
+	display: flex;
+	flex-direction: column;
+	margin-top: 32px;
+	padding-top: 14px;
+	padding-left: 35px;
+	padding-bottom: 14px;
+	z-index: 101;
+
+	&__wrapper {
+		display: flex;
+		flex-direction: row;
+	}
+
+	&__label {
+		cursor: pointer;
+		margin-bottom: 15px;
+	}
+}
+.hidden {
+	visibility: hidden;
+}
