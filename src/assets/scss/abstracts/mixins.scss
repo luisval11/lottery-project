@@ -3,3 +3,15 @@
 	font-feature-settings: "pnum" on, "lnum" on;
 	text-transform: uppercase;
 }
+
+@mixin aboveBreakpoint() {
+	@media (min-width: 768px) {
+		@content;
+	}
+}
+
+@mixin belowBreakpoint() {
+	@media (max-width: 767px) {
+		@content;
+	}
+}
