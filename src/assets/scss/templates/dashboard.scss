@@ -1,0 +1,20 @@
+@import "../abstracts/variables";
+
+.dashboard {
+	&__header {
+		margin: 43px 0px 0px 84px;
+	}
+
+	&__list {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: 114px 114px;
+		row-gap: 35px;
+	}
+
+	&__rectangle {
+		border-bottom: 1px solid #cccdd9;
+		margin: 26px 84px 0px;
+		opacity: 0.12;
+	}
+}
