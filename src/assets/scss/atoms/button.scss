@@ -1,0 +1,19 @@
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+
+button {
+	background: linear-gradient(
+		90deg,
+		$color-button-01 0%,
+		$color-button-02 100%
+	);
+	border-radius: 4px;
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.16);
+	color: $color-ui-casino-01;
+	font-size: 14px;
+	line-height: 21px;
+	text-align: center;
+	@include CTA;
+	min-height: 40px;
+	padding: 7px 14px 7px 14px;
+}

@@ -1,0 +1,18 @@
+@import "../abstracts/variables";
+
+h4 {
+	color: $color-ui-casino-02;
+	font-feature-settings: "pnum" on, "lnum" on;
+	font-size: 21px;
+	@include CTA;
+	line-height: 24px;
+}
+
+h5 {
+	color: $color-ui-casino-02;
+	font-feature-settings: "pnum" on, "lnum" on;		
+	font-size: 17px;
+	@include CTA;
+	line-height: 21px;
+	margin: 2px 0px;
+}

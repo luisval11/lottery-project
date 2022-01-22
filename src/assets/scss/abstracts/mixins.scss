@@ -1,0 +1,5 @@
+@mixin CTA {
+	font-weight: 900;
+	font-feature-settings: "pnum" on, "lnum" on;
+	text-transform: uppercase;
+}
