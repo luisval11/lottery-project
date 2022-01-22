@@ -1,3 +1,5 @@
+import { List } from "../organisms/List";
+
 const Dashboard = ({
 	headerTitle,
 	isOpenSort,
@@ -13,6 +15,13 @@ const Dashboard = ({
 	return (
 		<div class="dashboard">
 			{headerTitle && <h4 className="dashboard__header">{headerTitle}</h4>}
+			<div className="dashboard__rectangle" />
+			<List
+				className="dashboard__list"
+				items={items}
+				selectedItem={selectedItem}
+				handleSelectItem={handleSelectItem}
+			/>
 		</div>
 	);
 };
