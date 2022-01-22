@@ -1,5 +1,4 @@
-import './style';
-import App from './components/app';
-import './assets/scss/main.scss';
+import "./assets/scss/main.scss";
+import App from "./components/app";
 
 export default App;
