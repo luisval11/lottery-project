@@ -1,0 +1,14 @@
+@import "../abstracts/variables";
+
+label {
+	color: $color-ui-casino-03;
+	display: flex;
+	align-items: center;
+	font-feature-settings: "pnum" on, "lnum" on;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 21px;
+	& input[type="radio"] {
+		margin-right: 15px;
+	}
+}
