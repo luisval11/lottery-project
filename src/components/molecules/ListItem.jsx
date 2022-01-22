@@ -25,18 +25,20 @@ export const ListItem = ({ id, item, handleSelectItem, selectedItem }) => {
 				onClick={handleOnClick}
 			>
 				<div className="list-item__wrapper">
-					<Image
-						className={`list-item__info-image${
-							!(selectedItem === id) ? "--hidden" : ""
-						}`}
-						src={info}
-						alt="Information"
-					/>
-					<Image
-						className="list-item__image"
-						src={imageLogo}
-						alt={displayName}
-					/>
+					<div>
+						<Image
+							className={`list-item__info-image${
+								!(selectedItem === id) ? "--hidden" : ""
+							}`}
+							src={info}
+							alt="Information"
+						/>
+						<Image
+							className="list-item__image"
+							src={image}
+							alt={displayName}
+						/>
+					</div>
 					<div className="list-item__info">
 						{provider && <label>{provider.join(",")}</label>}
 						{displayName && <h5>{displayName}</h5>}
@@ -57,6 +59,11 @@ export const ListItem = ({ id, item, handleSelectItem, selectedItem }) => {
 					/>
 				)}
 			</div>
+			<div
+				className={`list-item__item-separator${
+					selectedItem === id ? "--selected" : ""
+				}`}
+			/>
 		</div>
 	);
 };

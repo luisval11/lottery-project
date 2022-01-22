@@ -1,20 +1,35 @@
 @import "../abstracts/variables";
 
 .dashboard {
+	max-width: 1280px;
 	&__header {
 		margin: 43px 0px 0px 84px;
+		@include belowBreakpoint() {
+			margin: 23px 0px 0px 24px;
+		}
 	}
 
 	&__list {
-		display: grid;
-		grid-template-columns: 1fr 1fr 1fr;
-		grid-template-rows: 114px 114px;
-		row-gap: 35px;
+		@include aboveBreakpoint() {
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr;
+			max-width: 1280px;
+			grid-template-rows: 114px 114px;
+			row-gap: 35px;
+			margin-left: 64px;
+        }
+		@include belowBreakpoint() {
+			margin-left: 24px;
+			margin-right: 24px;
+		}
 	}
 
 	&__rectangle {
 		border-bottom: 1px solid #cccdd9;
-		margin: 26px 84px 0px;
+		margin: 26px 0px 0px 84px;
+		@include belowBreakpoint() {
+			margin: 20px 0px 0px 0px;
+		}
 		opacity: 0.12;
 	}
 }
