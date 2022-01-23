@@ -1,3 +1,4 @@
+import { h } from "preact";
 import { ListItem } from "../molecules/ListItem";
 
 export const List = ({ items, className, handleSelectItem, selectedItem }) => {
