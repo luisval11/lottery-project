@@ -1,3 +1,9 @@
-export const Label = ({children, text, ...rest}) => {
-  return <label {...rest}>{children}{text}</label>;
+import { h } from "preact";
+export const Label = ({ children, text, ...rest }) => {
+	return (
+		<label {...rest}>
+			{children}
+			{text}
+		</label>
+	);
 };
