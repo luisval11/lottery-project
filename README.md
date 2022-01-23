@@ -49,4 +49,21 @@ npm install
 npm run test
 ```
 
+## Deploy a container for this project with Docker
+
+To use Docker to deploy this project, it requires to follow this steps:
+
+1. Navigate to the directory of this file.
+2. Execute the following commands:
+
+```bash
+# build docker image for this project following the Dockerfile.prod
+docker build -f Dockerfile.prod -t lottery-project:latest .
+
+# deploy the application as a Docker container
+docker run -it -p 80:80 lottery-project:latest
+```
+
+3. Access to http://localhost through a web browser to reach the application.
+
 For detailed explanation on how things work, checkout the [CLI Readme](https://github.com/developit/preact-cli/blob/master/README.md).
