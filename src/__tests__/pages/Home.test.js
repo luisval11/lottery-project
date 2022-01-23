@@ -72,7 +72,6 @@ describe("Test on Home", () => {
 				handleSelectOnChange={handleSelectOnChange}
 			/>
 		);
-		console.log(wrapper.find("div.list-item").length);
 		expect(wrapper.find("div.list-item").length).toBe(9);
 	});
 
