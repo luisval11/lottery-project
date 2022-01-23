@@ -1,3 +1,4 @@
+import { Fragment, h } from "preact";
 import chevronDown from "../../assets/images/chevron-down.png";
 import { Image } from "../atoms/Image";
 import { Radio } from "../molecules/Radio";
@@ -11,18 +12,14 @@ export const Sort = ({
 	title,
 }) => {
 	return (
-		<>
-			<div
-				className={`sort__wrapper-select${isOpenSort ? "--hidden" : ""}`}
-			>
+		<Fragment>
+			<div className={`sort__wrapper-select${isOpenSort ? "--hidden" : ""}`}>
 				<span className="sort__select" onClick={handleOpenSort}>
 					<Image className="sort__select-image" src={chevronDown} />
 					{title}
 				</span>
 			</div>
-			<div
-				className={`sort__wrapper-select${isOpenSort ? "" : "--hidden"}`}
-			>
+			<div className={`sort__wrapper-select${isOpenSort ? "" : "--hidden"}`}>
 				<div>
 					<span
 						className={`sort__select${isOpenSort ? "--open" : ""}`}
@@ -38,6 +35,6 @@ export const Sort = ({
 					onChange={handleSelectOnChange}
 				/>
 			</div>
-		</>
+		</Fragment>
 	);
 };
