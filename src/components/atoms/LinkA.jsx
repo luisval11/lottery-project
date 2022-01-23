@@ -1,5 +1,5 @@
-import React from 'react';
+import { h } from "preact";
 
-export const LinkA = ({href, ...rest}) => {
-  return <a href={href} {...rest} />;
+export const LinkA = ({ href, ...rest }) => {
+	return <a href={href} {...rest} />;
 };
