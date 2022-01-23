@@ -1,3 +1,4 @@
+import { h, Fragment } from "preact";
 import RadioSelected from "../../assets/images/Radio-selected.png";
 import RadioUnselected from "../../assets/images/Radio.png";
 import { Image } from "../atoms/Image";
@@ -12,7 +13,7 @@ export const Radio = ({ options, value, onChange }) => {
 					<Label
 						className={"radio__label"}
 						children={
-							<>
+							<Fragment>
 								<Image
 									src={value === option.name ? RadioSelected : RadioUnselected}
 								/>
@@ -27,7 +28,7 @@ export const Radio = ({ options, value, onChange }) => {
 										onChange(value);
 									}}
 								/>
-							</>
+							</Fragment>
 						}
 						text={option.text}
 					></Label>
