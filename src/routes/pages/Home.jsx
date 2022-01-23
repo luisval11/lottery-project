@@ -1,3 +1,4 @@
+import { h } from "preact";
 import { useEffect, useState } from "preact/hooks";
 import Dashboard from "../../components/templates/Dashboard";
 import initialValues from "../../db/test-data.json";
@@ -47,7 +48,6 @@ const Home = () => {
 				sort={sort}
 				sortTitle="Sort Games"
 				sortOptions={SORT_OPTIONS}
-				selectedItem={selectedItem}
 				handleSelectItem={handleSelectItem}
 				handleShowSortMenu={handleShowSortMenu}
 				handleSelectOnChange={handleSelectOnChange}
