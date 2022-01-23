@@ -1,8 +1,9 @@
-import imageLogo from "../../assets/images/image.png";
+import { h } from "preact";
 import info from "../../assets/images/info.png";
 import { normalizeUrl } from "../../helpers/helpers";
 import { Button } from "../atoms/Button";
 import { Image } from "../atoms/Image";
+import { Label } from "../atoms/Label";
 import { LinkA } from "../atoms/LinkA";
 
 export const ListItem = ({ id, item, handleSelectItem, selectedItem }) => {
@@ -40,12 +41,12 @@ export const ListItem = ({ id, item, handleSelectItem, selectedItem }) => {
 						/>
 					</div>
 					<div className="list-item__info">
-						{provider && <label>{provider.join(",")}</label>}
+						{provider && <Label>{provider.join(",")}</Label>}
 						{displayName && <h5>{displayName}</h5>}
 						{currencyData &&
 							currencyData.EUR &&
 							currencyData.EUR.minimumStake && (
-								<label>€{currencyData.EUR.minimumStake} min. Stake</label>
+								<Label>€{currencyData.EUR.minimumStake} min. Stake</Label>
 							)}
 					</div>
 				</div>
